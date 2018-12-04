@@ -1,6 +1,6 @@
 #!/bin/bash
 
-repositories=(Baby_Name_Generator BabyNameAPI BabyNameConsumer)
+repositories=(BabyNameGeneratorAPI BabyNameAPI BabyNameConsumer)
 
 maven_clean_install() {
         mvn clean install -q -f $1
