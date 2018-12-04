@@ -29,4 +29,13 @@ services:
       context: BabyNameGeneratorAPI
       args:
       - artifact_id=BabyNameGenerator
-      - version=0.0.1-SNAPSHOT
+      - version=0.0.1-SNAPSHOT  
+  babyfront:
+    container_name: babyfront
+    build:
+      context: BabyFrontEnd
+      args:
+      - artifact_id=BabyFrontEnd
+      - version=1.0.0
+    ports:
+    - 3000:3000
