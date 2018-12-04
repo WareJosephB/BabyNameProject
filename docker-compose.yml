@@ -15,7 +15,7 @@ services:
       - artifact_id=BabyNameAPI
       - version=0.0.1-SNAPSHOT
     ports:
-    - 8080:8080
+    - 80:8080
   babyconsumer:
     container_name: babyconsumer
     build:
@@ -29,4 +29,4 @@ services:
       context: BabyNameGeneratorAPI
       args:
       - artifact_id=BabyNameGenerator
-      - version=0.0.1.SNAPSHOT
+      - version=0.0.1-SNAPSHOT
