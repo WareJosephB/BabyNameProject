@@ -30,12 +30,3 @@ services:
       args:
       - artifact_id=babygenerator
       - version=0.0.1.snapshot
-  babyfrontend:
-    container_name: account-front-end
-    build:
-      context: Account-Front-End
-      args:
-      - artifact_id=account-front-end
-      - version=1.0.0
-    ports:
-- 80:3000
