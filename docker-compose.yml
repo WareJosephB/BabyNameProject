@@ -1,0 +1,41 @@
+version: '3'
+services:
+  activemq:
+    container_name: activemq
+    image: bobcrutchley/activemq
+  mongodb:
+    container_name: mongodb
+    image: mongo
+    restart: always
+  babyapi:
+    container_name: babyapi
+    build:
+      context: BabyNameAPI
+      args:
+      - artifact_id=babyapi
+      - version=0.0.1.snapshot
+    ports:
+    - 8080:8080
+  babyconsumer
+    container_name: babyconsumer
+    build:
+      context: BabyNameConsumer
+      args:
+      - artifact_id=babyconsumer
+      - version=0.0.1.snapshot
+  babygenerator:
+    container_name: babygenerator
+    build:
+      context: Baby_Name_Generator
+      args:
+      - artifact_id=babygenerator
+      - version=0.0.1.snapshot
+  babyfrontend:
+    container_name: account-front-end
+    build:
+      context: Account-Front-End
+      args:
+      - artifact_id=account-front-end
+      - version=1.0.0
+    ports:
+- 80:3000
