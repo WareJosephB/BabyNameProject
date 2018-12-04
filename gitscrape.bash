@@ -4,7 +4,7 @@ repositories=(BabyNameGeneratorAPI BabyNameAPI BabyNameConsumer)
 baseRepo = https://github.com/WareJosephB
 
 git_clone() {
-        git_clone $1
+        git clone $1
 }
 for repository in ${repositories[@]}; do
         git_clone ${baseRepo}/${repository}
